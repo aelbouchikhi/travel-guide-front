@@ -1,5 +1,11 @@
+import Filters from "./Components/Filters";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <Filters />
+    </>
+  );
 }
 
 export default App;
