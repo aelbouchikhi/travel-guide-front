@@ -11,7 +11,7 @@ import {
 const Filters = () => {
   return (
     <div>
-      <div className=" box-border m-12 w-[16%] min-w-[10%] h-auto border-2 border-[#E1E1E1] rounded-3xl">
+      <div className=" box-border m-12 w-[24rem] min-w-[10%] h-auto border-2 border-[#E1E1E1] rounded-3xl">
         {/* Div / Reset */}
         <div className="box-border items-center justify-center flex  w-full h-24 border-b-2 border-[#E1E1E1] rounded-3xl">
           <div className="flex gap-44 items-center">
