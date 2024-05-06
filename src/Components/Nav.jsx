@@ -1,4 +1,4 @@
-import { headerLogo } from "../assets/images";
+import headerLogo  from "../assets/images/header-logo.png";
 import { navLinks } from "../../constants";
 import {hamburger} from "../assets/icons/index"
 import { IoSearch } from "react-icons/io5";

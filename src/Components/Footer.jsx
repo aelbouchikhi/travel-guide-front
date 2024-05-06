@@ -1,5 +1,5 @@
 import React from 'react';
-import { headerLogo } from '../assets/images';
+import headerLogo from '../assets/images/header-logo.png';
 import { CiLocationOn } from "react-icons/ci";
 import { GrPhone } from "react-icons/gr";
 import { MdOutlineMailOutline } from "react-icons/md";
