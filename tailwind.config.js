@@ -4,7 +4,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Montserrat: ['"Montserrat"', "sans-serif"],
+        palanquin: ["Palanquin", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      colors: {
+        primary: "#ff5333",
+      },
+      boxShadow: {
+        "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
       },
     },
   },
