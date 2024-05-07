@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import './register.css'
 
 const RegisterModal = ({ show, onClose,openLogin }) => {
-  console.log(show)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
     useEffect(() => {
@@ -34,8 +33,8 @@ const RegisterModal = ({ show, onClose,openLogin }) => {
             {
       show && (
           <section className='register-section font-montserrat capitalize font-medium '>
-                  <div className='modal-overlay'>
-              <div className='modal-container'>
+            <div className='modal-overlay'>
+            <div className='modal-container'>
             <form className='register-modal'>
               <TfiClose onClick={onClose} className='close-btn' />
               {/* <button className='google-auth'> */}

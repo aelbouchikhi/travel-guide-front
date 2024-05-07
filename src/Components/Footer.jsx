@@ -10,7 +10,7 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className='bg-[#F4EAE5] pt-8'>
+        <footer className=' bg-[#faf1ed] pt-8'>
             <div className='container  font-montserrat capitalize mx-auto flex  justify-between'>
                 <div className='pb-6'>
                     <img src={headerLogo} width={150}/>
