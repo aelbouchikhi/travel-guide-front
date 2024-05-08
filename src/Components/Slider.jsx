@@ -13,7 +13,7 @@ const Slider = () => {
     desktop: {
       breakpoint: { max: 1024, min: 800 },
       items: 4,
-      // partialVisibilityGutter: 40
+      partialVisibilityGutter: 40
     },
     tablet: {
       breakpoint: { max: 800, min: 464 },
@@ -31,7 +31,7 @@ const Slider = () => {
     else
          document.querySelector('.shadow-left').style.backgroundImage = 'linear-gradient(to right, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%)';
   
-    if(currentSlide === 2)
+    if(currentSlide === 1)
          document.querySelector('.shadow-right').style.background = 'transparent';
     else
          document.querySelector('.shadow-right').style.backgroundImage = 'linear-gradient(to left, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%)';

@@ -2,13 +2,18 @@ import React, { useEffect, useState, useRef } from "react";
 import { CgClose } from "react-icons/cg";
 import "./search.css";
 import { GoSearch } from "react-icons/go";
-import { searchFilter } from "../../constants";
+import { messages, placeholderMessages, searchFilter, searchLabels } from "../../constants";
 import { near } from "../assets/icons";
+
+
 
 const Search = ({ show, onClose }) => {
   const [showSeggest, setShowSeggest] = useState(false);
   const [placeholder, setPlaceholder] = useState("Search for cities");
   const [headingMessage, setHeadingMessage] = useState("where to?");
+  const [activeItem, setActiveItem] = useState('cities');
+
+
   const modalRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -42,7 +47,12 @@ const Search = ({ show, onClose }) => {
     document.addEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleFilterSearch = (e) => {};
+  const handleFilterSearch = (e) => {
+      const current = e.target.getAttribute('data-label')
+       setActiveItem(current)
+       setHeadingMessage(messages[current])
+       setPlaceholder(placeholderMessages[current]);
+  };
   return (
     <>
       {show && (
@@ -53,17 +63,18 @@ const Search = ({ show, onClose }) => {
               className="search-close-btn cursor-pointer text-white relative z-[2000]"
             />
 
-            <div className="text-center  pt-[6rem] font-montserrat capitalize text-lg container mx-auto">
+            <div className="text-center  pt-[6rem] font-montserrat text-lg container mx-auto">
               <div className="">
-                <h2 className="font-bold text-[3rem] tracking-[2px] ">
-                  where to?
+                <h2 className="font-bold text-[3rem]  tracking-[-1px] ">
+                    {headingMessage}
                 </h2>
-                <ul className="list-none flex mt-[3rem]  justify-center">
-                  {searchFilter.map((item) => (
+                <ul className="list-none capitalize flex mt-[3rem]  justify-center">
+                  {searchFilter.map((item,index) => (
                     <li
                       key={item.label}
-                      className=" first-of-type:border-b-2 pb-2 first-of-type:border-black first-of-type:font-bold mr-[3rem] text-[1.1rem] cursor-pointer"
+                      className={`${activeItem == searchLabels[index]? 'border-b-2 border-black font-bold ': 'font-medium'}  pb-2  mr-[3rem] text-[1.1rem] cursor-pointer`}
                       onClick={handleFilterSearch}
+                      data-label={searchLabels[index]}
                     >
                       {item.label}
                     </li>
@@ -77,7 +88,7 @@ const Search = ({ show, onClose }) => {
                 <div className="relative flex w-full items-center">
                   <input
                     type="search"
-                    className="w-full h-full pl-[3.4rem] pr-5 placeholder-capitalize text-[15px] border-[0.1rem] border-[#e0e0e0] rounded-full"
+                    className="w-full h-full pl-[3.4rem] pr-5  text-[15px] border-[0.1rem] border-[#e0e0e0] rounded-full"
                     placeholder={placeholder}
                     onFocus={handleSearchSeggest}
                     ref={inputRef}

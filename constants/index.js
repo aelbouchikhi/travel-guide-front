@@ -15,67 +15,29 @@ export const searchFilter = [
     {label: 'restaurants'}
 ]
 
-// export const statistics = [
-//     { value: '1k+', label: 'Brands' },
-//     { value: '500+', label: 'Shops' },
-//     { value: '250k+', label: 'Customers' },
-// ];
+export const searchLabels = {
+    0: 'cities',
+    1: 'hotels',
+    2: 'things to do',
+    3: 'resturants'
+  }
+export const messages ={
+    'cities': 'Where to?',
+    'hotels': 'Find places to stay',
+    'things to do': 'Do something fun',
+    'resturants': 'Find places to eat'
+  
+  }
+export const placeholderMessages = {
+    'cities': ' Search for cities',
+    'hotels': 'Hotel name or city',
+    'things to do': 'Attraction, activity or city',
+    'resturants': 'Resturant name or city'
+  
+  }
 
-// export const products = [
-//     {
-//         imgURL: shoe4,
-//         name: "Nike Air Jordan-01",
-//         price: "$200.20",
-//     },
-//     {
-//         imgURL: shoe5,
-//         name: "Nike Air Jordan-10",
-//         price: "$210.20",
-//     },
-//     {
-//         imgURL: shoe6,
-//         name: "Nike Air Jordan-100",
-//         price: "$220.20",
-//     },
-//     {
-//         imgURL: shoe7,
-//         name: "Nike Air Jordan-001",
-//         price: "$230.20",
-//     },
-// ];
 
-// export const services = [
-//     {
-//         imgURL: truckFast,
-//         label: "Free shipping",
-//         subtext: "Enjoy seamless shopping with our complimentary shipping service."
-//     },
-//     {
-//         imgURL: shieldTick,
-//         label: "Secure Payment",
-//         subtext: "Experience worry-free transactions with our secure payment options."
-//     },
-//     {
-//         imgURL: support,
-//         label: "Love to help you",
-//         subtext: "Our dedicated team is here to assist you every step of the way."
-//     },
-// ];
 
-// export const reviews = [
-//     {
-//         imgURL: customer1,
-//         customerName: 'Morich Brown',
-//         rating: 4.5,
-//         feedback: "The attention to detail and the quality of the product exceeded my expectations. Highly recommended!"
-//     },
-//     {
-//         imgURL: customer2,
-//         customerName: 'Lota Mongeskar',
-//         rating: 4.5,
-//         feedback: "The product not only met but exceeded my expectations. I'll definitely be a returning customer!"
-//     }
-// ];
 
 
 // export const footerLinks = [
@@ -109,8 +71,3 @@ export const searchFilter = [
 //     },
 // ];
 
-// export const socialMedia = [
-//     { src: facebook, alt: "facebook logo" },
-//     { src: twitter, alt: "twitter logo" },
-//     { src: instagram, alt: "instagram logo" },
-// ];
