@@ -13,7 +13,7 @@ const Slider = () => {
     desktop: {
       breakpoint: { max: 1024, min: 800 },
       items: 4,
-      partialVisibilityGutter: 40
+      // partialVisibilityGutter: 40
     },
     tablet: {
       breakpoint: { max: 800, min: 464 },
@@ -58,10 +58,10 @@ const Slider = () => {
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4d/45/65/tangier.jpg?w=600&h=600&s=1" />
           <h3>tangier,<br/>morocco</h3>
         </div>
-        <div className="card">
+        {/* <div className="card">
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/c5/7c/68/caption.jpg?w=600&h=600&s=1&cx=950&cy=1766&chk=v1_9ee2771da71f55a7ac6a" />
           <h3>New York City,<br/>NY</h3>
-        </div>
+        </div> */}
         <div className="card">
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/ae/5d/ec/caption.jpg?w=600&h=600&s=1" />
            <h3>cancun, mexico</h3>

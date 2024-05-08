@@ -13,7 +13,7 @@
   cursor: pointer;
 
 }
-.modal-overlay {
+.register-section .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
