@@ -30,17 +30,17 @@ const Hero = () => {
       <div className="relative  md:w-3/5 ">
         <img src={layer} className="w-full" />
    
-          <div className=" w-[30%] absolute left-[14%] top-[4rem]  md:left-[12%] lg:top-[10%] lg:left-[20%] xl:left-[30%] xl:top-[17%] lg:w-[11rem]">
+          <div className=" w-[30%] absolute left-[14%] top-[4rem]  md:left-[12%] lg:top-[10%] lg:left-[20%] xl:left-[30%] xl:top-[17%] lg:w-[11rem] 2xl:w-[14rem]">
               <img src={landing1} className="w-full  rounded-[1.5rem]" />
               <div className="rounded-full p-2 shadow-xl bg-primary absolute bottom-[-8%] left-[-16%]">
                 <IoIosSend className="text-3xl text-white" />
               </div>
           </div>
-          <div className=" w-[30%] absolute left-[14%] top-[63%] md:left-[12%] md:top-[60%]  xl:left-[30%] xl:top-[60%] lg:top-[52%] lg:left-[20%] lg:w-[11rem]">
+          <div className=" w-[30%] absolute left-[14%] top-[63%] md:left-[12%] md:top-[60%]  xl:left-[30%] xl:top-[60%] lg:top-[52%] lg:left-[20%] lg:w-[11rem] 2xl:w-[14rem]">
               <img src={landing2} className="w-full rounded-[1.5rem]" />
           </div>
 
-        <div className="w-[30%]  relative top-[-3rem]  left-[54%] md:left-[50%] lg:left-[52%]  xl:left-[66%] lg:top-[-20%] lg:w-[11rem]">
+        <div className="w-[30%]  relative top-[-3rem]  left-[54%] md:left-[50%] lg:left-[52%]  xl:left-[66%] lg:top-[-20%] lg:w-[11rem] 2xl:w-[14rem]">
           <img src={landing3} className="w-full rounded-[1.5rem]" />
           <div className="flex gap-2 absolute bottom-8 right-[-50%] bg-white shadow-xl py-4 px-5  rounded-full">
             <FaLocationDot className="icon text-[#FACD49]" size={20} />
