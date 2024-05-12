@@ -18,20 +18,20 @@ export const searchFilter = [
 export const searchLabels = {
     0: 'cities',
     1: 'hotels',
-    2: 'things to do',
+    2: 'attractions',
     3: 'resturants'
   }
 export const messages ={
     'cities': 'Where to?',
     'hotels': 'Find places to stay',
-    'things to do': 'Do something fun',
+    'attractions': 'Do something fun',
     'resturants': 'Find places to eat'
   
   }
 export const placeholderMessages = {
     'cities': ' Search for cities',
     'hotels': 'Hotel name or city',
-    'things to do': 'Attraction, activity or city',
+    'attractions': 'Attraction, activity or city',
     'resturants': 'Resturant name or city'
   
   }

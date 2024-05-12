@@ -93,6 +93,7 @@
     padding: 15px 30px;
     border-radius: 20px;
     margin-bottom: 20px;
+
 }
 .login-section .login-modal input::placeholder{
     text-transform: capitalize;

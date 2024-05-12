@@ -4,6 +4,7 @@ import "./search.css";
 import { GoSearch } from "react-icons/go";
 import { messages, placeholderMessages, searchFilter, searchLabels } from "../../constants";
 import { near } from "../assets/icons";
+import { getCity, getResturants } from "../../Apis/SearchApi";
 
 
 
@@ -12,6 +13,7 @@ const Search = ({ show, onClose }) => {
   const [placeholder, setPlaceholder] = useState("Search for cities");
   const [headingMessage, setHeadingMessage] = useState("where to?");
   const [activeItem, setActiveItem] = useState('cities');
+  const [input, setInput] = useState('')
 
 
   const modalRef = useRef(null);
@@ -53,6 +55,18 @@ const Search = ({ show, onClose }) => {
        setHeadingMessage(messages[current])
        setPlaceholder(placeholderMessages[current]);
   };
+  const handleChange = (e) => {
+    setInput(e.target.value)
+  } 
+  const handleSubmit = (e) => {
+    console.log(input);
+    e.preventDefault();
+  }
+
+  
+  // getCity('rabat').then((response)=>console.log(response.data));
+  getResturants('rabat').then((response)=>console.log(response.data))
+
   return (
     <>
       {show && (
@@ -83,7 +97,7 @@ const Search = ({ show, onClose }) => {
               </div>
               <form
                 className="flex w-[70%]  mx-auto  gap-4 mt-[2rem]"
-                action="/search"
+                onSubmit={handleSubmit}
               >
                 <div className="relative flex w-full items-center">
                   <input
@@ -92,6 +106,7 @@ const Search = ({ show, onClose }) => {
                     placeholder={placeholder}
                     onFocus={handleSearchSeggest}
                     ref={inputRef}
+                    onChange={handleChange}
                   />
                   <GoSearch className="absolute text-[1.4rem] left-5" />
                 </div>
