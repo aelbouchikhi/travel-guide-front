@@ -13,6 +13,7 @@ const Nav = () => {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   const [showSearchModal, setShowSearchModal] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,8 +41,19 @@ const Nav = () => {
     setShowSearchModal(false);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+
+  }, []);
+
   return (
-    <header className="py-4 text-[15px]   top-0 px-6 lg:px-16  sticky z-50 w-full">
+    <header className={`${scrollPosition > 0 ? 'shadow-lg z-30 bg-white': ''} py-4 text-[15px]   top-0 px-6 lg:px-16  sticky z-50 w-full`}>
       <nav className="flex justify-between items-center">
         <Link href="/">
           <img src={headerLogo} width={160} />
