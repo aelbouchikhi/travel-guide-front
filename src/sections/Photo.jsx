@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../src/assets/images/photo.png'
+import photo from '../assets/images/photo.png'
 import './photo.css'
 
 const Photo = () => {

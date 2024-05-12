@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "../src/Components/Slider";
+import Slider from "../Components/Slider";
 import './destinations.css'
 const Destinations = () => {
   return (

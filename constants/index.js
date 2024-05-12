@@ -2,10 +2,10 @@
 // import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3 } from "../assets/images";
 
 export const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "destinations", label: "Destinations" },
-    { href: "about", label: "About" },
-    { href: "contact-us", label: "Contact Us" },
+    { link: "/", label: "Home" },
+    { link: "destinations", label: "Destinations" },
+    { link: "about", label: "About" },
+    { link: "contact-us", label: "Contact Us" },
 ];
 
 export const searchFilter = [

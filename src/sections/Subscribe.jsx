@@ -1,6 +1,6 @@
 import React from 'react';
 import './subscribe.css'
-import subs from '../src/assets/images/subs.png'
+import subs from '../assets/images/subs.png'
 
 const Subscribe = () => {
     return (

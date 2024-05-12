@@ -71,7 +71,7 @@ const Search = ({ show, onClose }) => {
     <>
       {show && (
         <section className="search-section">
-          <div className="search-modal-overlay">
+          <div className="search-modal-overlay relative z-[2000] ">
             <CgClose
               onClick={onClose}
               className="search-close-btn cursor-pointer text-white relative z-[2000]"

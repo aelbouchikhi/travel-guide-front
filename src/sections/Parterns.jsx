@@ -1,10 +1,10 @@
 import React from 'react';
 import './part.css'
-import vector from '../src/assets/images/parVector.png'
-import trip from '../src/assets/images/trip.png'
-import expedia from '../src/assets/images/expedia.png'
-import airbnb from '../src/assets/images/airbnb.png'
-import booking from '../src/assets/images/booking.png'
+import vector from '../assets/images/parVector.png'
+import trip from '../assets/images/trip.png'
+import expedia from '../assets/images/expedia.png'
+import airbnb from '../assets/images/airbnb.png'
+import booking from '../assets/images/booking.png'
 const Parterns = () => {
     return (
         <section className='part-section container mx-auto relative w-full h-40'>
