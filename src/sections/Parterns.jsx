@@ -6,15 +6,14 @@ import airbnb from '../assets/images/airbnb.png'
 import booking from '../assets/images/booking.png'
 const Parterns = () => {
     return (
-        <section className='w-[90%]  mx-auto relative h-40'>
-            <img src={vector} className="absolute top-[-4rem] left-[-3.5rem] " />
-            <div className='flex justify-around  '>
+        <section className='w-[90%] mt-14 mx-auto relative my-20'>
+            <img src={vector} className="lg:block absolute hidden top-[-5rem] left-[-2.5rem] " />
+            <div className='flex flex-wrap justify-center gap-10  '>
                 <img className='w-[6rem]'  src={trip}/>
                 <img className='w-[6rem]'  src={expedia}/>
                 <img className='w-[6rem]'  src={booking}/>
                 <img className='w-[6rem]'  src={airbnb}/>
                 <img className='w-[6rem]'  src={booking}/>
-                <img className='w-[6rem]'  src={airbnb}/>
             </div>
         </section>
     );

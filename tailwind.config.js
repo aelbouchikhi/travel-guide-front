@@ -10,6 +10,7 @@ export default {
       },
       colors: {
         primary: "#ff5333",
+        statsColor: "rgb(0 88 83 / 5%);"
       },
       boxShadow: {
         "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",

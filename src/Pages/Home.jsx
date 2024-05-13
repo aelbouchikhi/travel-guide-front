@@ -6,6 +6,7 @@ import Services from "../sections/Services";
 import Photo from "../sections/Photo";
 import Subscribe from "../sections/Subscribe";
 import Footer from "../Components/Footer";
+import Stats from "../sections/Stats";
 
 
 const Home = () => {
@@ -13,8 +14,9 @@ const Home = () => {
       <main>
         <Hero />
         <Parterns />
-        {/* <Services />
-        <Destination/> */}
+        <Services />
+        <Stats/>
+        {/* <Destinations/> */}
         {/* <Photo/> */}
         {/* <Subscribe /> */}
     </main>
