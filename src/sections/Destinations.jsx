@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "../Components/Slider";
-import './destinations.css'
+// import './destinations.css'
 const Destinations = () => {
   return (
-    <section className="destinations  container mx-auto">
+    <section className="destinations container mx-auto">
       <div className="heading">
         <p className="text-primary font-montserrat font-medium">Top Destination</p>
         <h2 className="font-montserrat">

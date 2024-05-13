@@ -33,7 +33,7 @@ const Stats = () => {
       className=" bg-statsColor  mb-40 bg-cover"
       style={{ backgroundImage: `url(${worldMap})` }}
     >
-      <div className="w-[90%] mx-auto py-10">
+      <div className="w-[90%] mx-auto py-10 ">
         <div className="text-center">
           <h2 className="text-[2rem] font-bold  font-montserrat">
             We always try to give you <br />
