@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap")
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -43,5 +44,35 @@
     transform: translateX(100%);
     /* width: 0%; */
     opacity: 0;
+  }
+  .placeholder{
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  .visible-part{
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    z-index: 100;
+  }
+  .shadow-left{
+      left: 0px;
+      /* background-color: red; */
+      background-image: linear-gradient(to right, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%);
+
+  }
+  .shadow-right{
+      right: 0px;
+
+      /* background-color: red; */
+      background-image: linear-gradient(to left, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%);
+      
+  }
+  .hide{
+      background-image: none;
+  }
+  .show{
+      background-image: linear-gradient(to left, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%);
   }
 }

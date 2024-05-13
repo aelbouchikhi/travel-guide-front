@@ -27,7 +27,7 @@ const Hero = () => {
         </button>
       </div>
 
-      <div className="relative  md:w-3/5 ">
+      <div className="relative  md:w-3/5">
         <img src={layer} className="w-full" />
    
           <div className=" w-[30%] absolute left-[14%] top-[4rem]  md:left-[12%] lg:top-[10%] lg:left-[20%] xl:left-[30%] xl:top-[17%] lg:w-[11rem] 2xl:w-[14rem]">

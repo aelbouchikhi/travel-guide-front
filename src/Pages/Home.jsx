@@ -15,9 +15,8 @@ const Home = () => {
         <Parterns />
         <Services />
         <Stats/>
-        {/* <Destinations/> */}
-        {/* <Photo/> */}
-        {/* <Subscribe /> */}
+        <Destinations/>
+        <Subscribe />
     </main>
   );
 };

@@ -7,12 +7,12 @@ const Slider = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 1024 },
-      items: 5,
+      items: 4,
       partialVisibilityGutter: 40
     },
     desktop: {
       breakpoint: { max: 1024, min: 800 },
-      items: 4,
+      items: 3,
       partialVisibilityGutter: 40
     },
     tablet: {
@@ -31,7 +31,7 @@ const Slider = () => {
     else
          document.querySelector('.shadow-left').style.backgroundImage = 'linear-gradient(to right, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%)';
   
-    if(currentSlide === 1)
+    if(currentSlide === 2)
          document.querySelector('.shadow-right').style.background = 'transparent';
     else
          document.querySelector('.shadow-right').style.backgroundImage = 'linear-gradient(to left, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%)';
