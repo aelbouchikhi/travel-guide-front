@@ -6,7 +6,6 @@ import "./register.css";
 import { register } from "../Api/axios.Config";
 
 const RegisterModal = ({ show, onClose, openLogin }) => {
-  console.log(show);
   // const [username, setUsername] = useState("");
   // const [password, setPassword] = useState("");
   const [dataRegister, setDataRegister] = useState();
@@ -30,7 +29,7 @@ const RegisterModal = ({ show, onClose, openLogin }) => {
     console.log(dataRegister);
     register(dataRegister)
       .then((res) => {
-        console.log(res.data);
+        //console.log(res.data);
         // localStorage.setItem("token", res.data.token);
         // onClose();
         // openLogin();

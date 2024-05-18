@@ -12,6 +12,6 @@ export async function register(user) {
 }
 
 export function login(user) {
-  console.log(user);
   return Api.post("/api/users/login", user);
 }
+

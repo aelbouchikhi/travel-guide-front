@@ -5,11 +5,13 @@ import { Link, Navigate } from "react-router-dom";
 import "./login.css";
 import { login } from "../Api/axios.Config";
 import { useNavigate } from "react-router-dom";
+import { getUser } from "../UserContext/UserContext";
 
 const Login = ({ show, onClose, openRegister }) => {
   const Navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { user, setUser, setToken } = getUser();
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -37,16 +39,26 @@ const Login = ({ show, onClose, openRegister }) => {
       email,
       password,
     };
-    login(dataSignIn)
-      .then((res) => {
-        console.log(res.data);
-        localStorage.setItem("token", res.data.token);
-        onClose();
-        Navigate("/home");
-      })
-      .catch((error) => {
-        console.log("erroe message ", error);
-      });
+    const tryLogin = await login(dataSignIn);
+    if (tryLogin.data.success) {
+      localStorage.setItem("token", JSON.stringify(tryLogin.data.token));
+      setToken(tryLogin.data.token);
+      //console.log(tryLogin.data.user);
+      localStorage.setItem("user", JSON.stringify(tryLogin.data.user));
+      setUser(tryLogin.data.user);
+      Navigate("/forum");
+      onClose();
+    }
+    // .then((res) => {
+    //   //console.log(res.data.user);
+    //   localStorage.setItem("token", res.data.token);
+    //   // loginUser(res.data.user);
+    //   onClose();
+
+    // })
+    // .catch((error) => {
+    //   console.log("error message ", error);
+    // });
     // console.log("Logging in with:", { username, password });
     // onClose();
   };

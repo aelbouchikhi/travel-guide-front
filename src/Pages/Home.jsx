@@ -7,18 +7,21 @@ import Services from "../../sections/Services";
 import Photo from "../../sections/Photo";
 import Subscribe from "../../sections/Subscribe";
 import Footer from "../Components/Footer";
+import { getUser } from "../UserContext/UserContext";
 
 const Home = () => {
-    return (
-        <main>
-            <Hero/>
-            <Parterns/>
-            <Services/>
-            <Destinations />
-            {/* <Photo/> */}
-            <Subscribe/>
-        </main>
-    );
-}
+  const { user } = getUser();
+  console.log(user);
+  return (
+    <main>
+      <Hero />
+      <Parterns />
+      <Services />
+      <Destinations />
+      {/* <Photo/> */}
+      <Subscribe />
+    </main>
+  );
+};
 
 export default Home;
