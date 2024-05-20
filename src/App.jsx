@@ -1,9 +1,9 @@
-import Filters from "./Components/Filters";
+import AdminRoutes from "./Routes/admin.Routes";
 
 function App() {
   return (
     <>
-      <Filters />
+      <AdminRoutes />
     </>
   );
 }
