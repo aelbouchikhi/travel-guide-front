@@ -1,18 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from "../Pages/Dashboard";
 import Login from "../Pages/Login";
+import PrivateRoute, { LoginRoute } from "./private.Routes";
 
 const AdminRoutes = () => {
   return (
-    <Router>
+    <BrowserRouter>
       {/* <Nav /> */}
       <Routes>
-        <Route path="/admin" element={<Login />} />
-        <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route element={<LoginRoute />}>
+          <Route path="/admin" element={<Login />} />
+        </Route>
+        <Route element={<PrivateRoute />}>
+          <Route path="/admin/dashboard" element={<Dashboard />} />
+        </Route>
         {/* <Route path="/home" element={<Subscribe />} /> */}
       </Routes>
       {/* <Footer /> */}
-    </Router>
+    </BrowserRouter>
   );
 };
 

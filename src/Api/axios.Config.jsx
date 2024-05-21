@@ -15,3 +15,7 @@ export function login(user) {
   console.log(user);
   return Api.post("/api/admin/login", user);
 }
+
+export async function getAllUsers() {
+  return await Api.get("/api/admin/allusers");
+}

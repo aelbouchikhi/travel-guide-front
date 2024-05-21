@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { login } from "../Api/axios.Config";
+import { useNavigate } from "react-router-dom";
 
 const LoginConponnent = () => {
   const [dataLogin, setDataLogin] = useState("");
@@ -7,11 +8,17 @@ const LoginConponnent = () => {
   const handlChangeField = (e) => {
     setDataLogin({ ...dataLogin, [e.target.name]: e.target.value });
   };
+  const navigate = useNavigate();
   const handLoginButton = (e) => {
     e.preventDefault();
     // console.log(dataLogin);
     login(dataLogin)
-      .then((res) => console.log(res))
+      .then((res) => {
+        localStorage.setItem("token", res.data.token);
+        // setDataList(res.data.token);
+        // console.log(listData);
+        navigate("dashboard");
+      })
       .catch((err) => setMessage(err.response.data));
   };
   return (
