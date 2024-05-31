@@ -18,7 +18,7 @@ import {
 import { Avatar, AvatarBadge, AvatarGroup } from "@chakra-ui/react";
 
 import { useDisclosure } from "@chakra-ui/react";
-const PostCard = ({ post, reload, onLike }) => {
+const PostCard = ({ post, reload, setReload, onLike }) => {
   //console.log(post);
   const { user } = getUser();
   const { id } = user;
@@ -29,11 +29,12 @@ const PostCard = ({ post, reload, onLike }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [commentState, setCommentState] = useState("");
   const [comments, setComments] = useState([]);
+
   useEffect(() => {
     const checkifLiked = () => {
       if (post.likes.includes(id)) setIsLiked(true);
       const check = post.likes.filter((like) => like._id == id);
-      console.log(check);
+      //console.log(check);
       if (check[0]) setIsLiked(true);
     };
     checkifLiked();
@@ -80,11 +81,14 @@ const PostCard = ({ post, reload, onLike }) => {
     }
   };
 
-  const hideComments = () => {
-    if (showComments) {
-      setShowComments(false);
-    }
+  const handleDelete = async () => {
+    const response = await axios.delete(
+      `http://localhost:3000/api/forum/posts/${post._id}`,
+      { data: { author: id } }
+    );
+    if (response) setReload(!reload);
   };
+
   return (
     <div className="relative m-auto w-full rounded-lg border-2">
       <div className="flex justify-between">
@@ -95,7 +99,7 @@ const PostCard = ({ post, reload, onLike }) => {
             alt=""
           />
           <div className="flex flex-col justify-center p-1">
-            <h2 className="flex-2 font-Montserrat shrink- font-medium">
+            <h2 className="flex-2 font-Monda font-medium">
               {post.author.username}
             </h2>
             <p className="font-Montserrat text-sm font-light text-slate-500">
@@ -115,9 +119,13 @@ const PostCard = ({ post, reload, onLike }) => {
               <div className="absolute left-2 top-8 h-9 w-9 rotate-45 rounded-lg border-2 border-gray-100 bg-gray-50"></div>
               <div className="absolute top-11 rounded-lg border-2 border-gray-100 bg-gray-50">
                 <ul>
-                  <li className={hoverdrop}>Edit</li>
                   <li className={hoverdrop}>Report</li>
                   <li className={hoverdrop}>See Comments</li>
+                  {post.author._id == id && (
+                    <li onClick={handleDelete} className={hoverdrop}>
+                      delete
+                    </li>
+                  )}
                 </ul>
               </div>
             </div>
@@ -128,11 +136,13 @@ const PostCard = ({ post, reload, onLike }) => {
         {haveImage && <img className="w-auto" src={user2} alt="" />}
         <p className="font-Montserrat border-b-2 p-4 text-lg">{post.content}</p>
       </div>
-      <div className="flex items-center justify-between overflow-hidden">
+      <div className="flex items-center justify-between overflow-hidden px-2 py-2">
         <div
           onClick={handleLike}
-          className={`rounded-bl-lg py-3 hover:bg-zinc-200 w-[33%] hover:text-black transition-colors duration-500 cursor-pointer flex gap-2 justify-center items-center font-Montserrat font-medium text-xl ${
-            isLiked ? "bg-blue-500 text-white " : ""
+          className={` py-1 rounded-md w-[15%]  hover:text-black transition-colors duration-500 cursor-pointer flex gap-2 justify-center items-center font-Montserrat font-medium text-xl ${
+            isLiked
+              ? "bg-orange-500 text-white "
+              : " border-2 border-orange-500"
           }`}
         >
           {/* <img src={like} alt="" /> */}
@@ -140,7 +150,7 @@ const PostCard = ({ post, reload, onLike }) => {
         </div>
         <div
           onClick={() => setShowComments(!showComments)}
-          className="font-Montserrat flex w-[33%] cursor-pointer items-center justify-center gap-2 rounded-br-lg py-3 text-xl font-medium transition-colors duration-500 hover:bg-zinc-200"
+          className="font-Montserrat flex w-[15%] cursor-pointer items-center justify-center gap-2 rounded-md rounded-br-lg border-2 border-blue-500 py-1 text-xl font-medium transition-colors duration-500 hover:bg-zinc-200"
         >
           {/* <img src={comment} alt="" /> */}
           <h3>Comment</h3>

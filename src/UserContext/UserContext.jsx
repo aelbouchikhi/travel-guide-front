@@ -20,12 +20,12 @@ export const UserContextProvider = ({ children }) => {
     console.log(user);
   }, []);
 
-  // const loginUser = (userData) => {
-  // setUser(userData);
-  //};
+  const loginUser = (userData) => {
+    setUser(userData);
+  };
 
   return (
-    <UserContext.Provider value={{ user, setUser, setToken }}>
+    <UserContext.Provider value={{ user, setUser }}>
       {children}
     </UserContext.Provider>
   );

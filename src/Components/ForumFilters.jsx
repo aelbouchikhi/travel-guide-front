@@ -11,24 +11,24 @@ import {
 const ForumFilters = () => {
   return (
     <div>
-      <div className=" fixed overflow-hidden top-12 box-border h-[80vh] m-12 w-[18%] min-w-[10%] border-2 border-[#E1E1E1] rounded-3xl">
+      <div className=" fixed overflow-hidden top-12 box-border h-[55vh] m-12 w-[18%] min-w-[10%] border-2 border-primary rounded-3xl">
         {/* Div / Reset */}
-        <div className=" p-10 box-border items-center justify-center flex flex-col gap-6 w-full h-44 border-b-2 border-[#E1E1E1] rounded-3xl">
+        <div className="items-center justify-center flex flex-col gap-6 w-full h-44 border-b-2 border-primary rounded-3xl">
           <div className="flex items-center mt-6">
             <div>
               <h3 className="font-Montserrat text-2xl font-bold">Search</h3>
             </div>
           </div>
-          <div>
+          <div className="w-full flex justify-center">
             <input
-              className=" bg-white p-2 h-16 mb-6 w-full rounded-3xl border-2 placeholder:text-gray-300 text-lg"
+              className=" bg-white px-4 h-16 mb-6 w-[80%] rounded-2xl border-2 placeholder:text-gray-300 text-lg"
               type="text"
               placeholder="Anything you want"
             />
           </div>
         </div>
         {/* Div Of Category Filtering*/}
-        <div className="box-border p-8 h-auto border-[#E1E1E1] border-b-2">
+        <div className="box-border p-6 h-auto border-[#E1E1E1]">
           <h4 className="mb-6 block font-Montserrat font-medium"> Category </h4>
           <label className="myContainer">
             All
@@ -62,7 +62,7 @@ const ForumFilters = () => {
           </label>
         </div>
         {/* Sort By Filtering Div */}
-        <div className=" box-border p-8 h-auto border-[#E1E1E1] ">
+        {/* <div className=" box-border p-8 h-auto border-[#E1E1E1] ">
           <h4 className="mb-6 block font-Montserrat font-medium">Sort By</h4>
           <label className="myContainer">
             Revealance
@@ -79,7 +79,7 @@ const ForumFilters = () => {
             <input type="checkbox" />
             <span className="checkmark"></span>
           </label>
-        </div>
+        </div> */}
       </div>
     </div>
   );

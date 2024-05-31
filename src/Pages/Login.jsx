@@ -11,7 +11,7 @@ const Login = ({ show, onClose, openRegister }) => {
   const Navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, setUser, setToken } = getUser();
+  const { user, setUser } = getUser();
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -42,7 +42,7 @@ const Login = ({ show, onClose, openRegister }) => {
     const tryLogin = await login(dataSignIn);
     if (tryLogin.data.success) {
       localStorage.setItem("token", JSON.stringify(tryLogin.data.token));
-      setToken(tryLogin.data.token);
+      //setToken(tryLogin.data.token);
       //console.log(tryLogin.data.user);
       localStorage.setItem("user", JSON.stringify(tryLogin.data.user));
       setUser(tryLogin.data.user);
