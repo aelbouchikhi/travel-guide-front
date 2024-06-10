@@ -46,7 +46,7 @@ const Stats = () => {
         </div>
         <div className=" mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {stats.map((el) => (
-            <div className="bg-white py-6 rounded-xl text-center shadow-3xl">
+            <div className="bg-white py-6 rounded-xl text-center shadow-3xl" key={el.label}>
               <img className="w-[1.5rem] mx-auto" src={el.icon} />
               <span className="inline-block my-3 font-bold text-[2rem]">{el.number}</span>
               <h3 className="font-montserrat ">{el.label}</h3>

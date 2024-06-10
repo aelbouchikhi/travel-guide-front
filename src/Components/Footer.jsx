@@ -11,7 +11,7 @@ import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className=" bg-[#faf1ed] pt-8">
-      <div className="w-[90%]  font-montserrat capitalize mx-auto flex  justify-between">
+      <div className="w-[90%]  font-montserrat capitalize mx-auto flex flex-col items-center md:flex-row justify-between">
         <div className="pb-6">
           <img src={headerLogo} width={150} />
           <ul className="list-none text-[#777]">

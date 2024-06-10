@@ -30,7 +30,6 @@ const Slider = () => {
          document.querySelector('.shadow-left').style.background = 'transparent';
     else
          document.querySelector('.shadow-left').style.backgroundImage = 'linear-gradient(to right, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%)';
-  
     if(currentSlide === 2)
          document.querySelector('.shadow-right').style.background = 'transparent';
     else

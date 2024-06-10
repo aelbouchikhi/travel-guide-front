@@ -11,8 +11,11 @@ const api = axios.create({
 export function getCity(query){
     return api.get(`/api/places/search?q=${query}`);
 }
-export function getResturants(query){
-    return api.get(`/api/hotels?location=${query}`);
+export function getAttractions(query){
+    return api.get(`/api/attractions?location=${query}`);
+}
+export function getCityAllData(query){
+    return api.get(`/api/places/search/all?q=${query}`)
 }
 
 

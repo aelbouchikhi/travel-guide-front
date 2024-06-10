@@ -64,9 +64,11 @@
 }
 .react-multiple-carousel__arrow--right {
     right: 2px;
+    z-index: 2;
 }
 .react-multiple-carousel__arrow--left {
     left: 2px;
+    z-index: 2;
 }
 
 .hide{

@@ -6,6 +6,7 @@ import Subscribe from "../sections/Subscribe";
 import Footer from "../Components/Footer";
 import Stats from "../sections/Stats";
 import Destinations from "../sections/Destinations";
+import Recent from "../sections/Recent";
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
         <Services />
         <Stats/>
         <Destinations/>
+        <Recent/>
         <Subscribe />
     </main>
   );

@@ -20,8 +20,69 @@
 
 
 }
+@keyframes pulsate {
+  0% {
+       opacity: 1;
+     }
+  50% {
+      opacity: 0.8;
+  }
+  100% {
+      opacity: 0;
+  }
+}
 
 @layer utilities {
+
+   /* .place-animate::before{
+     content: '';
+     position: absolute;
+     width: 10px;
+     height: 10px;
+     border-radius: 100%;
+     background-color: #FF6447;
+     top: 6px;
+     left: 4px;
+   }
+   .place-animate::after{
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FF6447;
+    background-color: transparent;
+    border-radius: 100%;
+    top: 2px;
+    left: 0px;
+    animation: pulsate 0.8s ease-out infinite;
+    opacity: 0;
+  } */
+  .z-index{
+    z-index: 300;
+    background-color: rgb(0, 0, 0, 0.6);
+  }
+  .transition-transform {
+    transition: transform 0.5s ease;
+  }
+  .item-width{
+    width: calc(100% / 3);
+    position: absolute;
+  }
+  .image-place::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.07);
+    top: 0;
+    left: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+.image-place:hover::before{
+    background-color: transparent;
+    transition: all 0.5s;
+}
    .active-link::before{
      content: '';
      position: absolute;
@@ -58,14 +119,13 @@
   }
   .shadow-left{
       left: 0px;
-      /* background-color: red; */
+      z-index: 2;
       background-image: linear-gradient(to right, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%);
 
   }
   .shadow-right{
       right: 0px;
-
-      /* background-color: red; */
+      z-index: 2;
       background-image: linear-gradient(to left, rgb(255, 255, 255, 1) 0%, rgb(255, 255, 255, 0) 100%);
       
   }
